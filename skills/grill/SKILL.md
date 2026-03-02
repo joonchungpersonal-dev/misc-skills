@@ -11,8 +11,9 @@ Stress-test code changes using a Comprehensive Reviewer agent + GPTLens Critic a
 
 ## Attribution & Sources
 
-This skill was built on the work of others. Proper credit:
+This skill extends a prompting technique into a formalized tool. Proper credit:
 
+- **"Grill me" prompting technique**: Boris Cherny (creator of Claude Code), from his "10 Tips from Inside the Claude Code Team" ([Threads post](https://www.threads.com/@boris_cherny/post/DUMZxTWElFm)). The core idea — challenging Claude to rigorously review your changes before proceeding — originates from Cherny's workflow recommendations.
 - **GPTLens Auditor/Critic pattern**: Hu et al., "Large Language Model-Powered Smart Contract Vulnerability Detection: New Perspectives," IEEE TPS (2023). arXiv:2310.01152. The two-phase diverge/converge approach (auditor generates findings, critic validates) to reduce false positives originates from this paper.
 - **Trail of Bits security configuration**: [trailofbits/claude-code-config](https://github.com/trailofbits/claude-code-config). Security review patterns and hardened Claude Code configuration from the Trail of Bits security research team.
 - **obra/superpowers**: [obra/superpowers](https://github.com/obra/superpowers). An agentic skills framework and software development methodology by Jesse Vincent that informed the skill file structure and agent orchestration patterns.
@@ -20,7 +21,7 @@ This skill was built on the work of others. Proper credit:
 - **OWASP Risk Rating Methodology**: OWASP Foundation. The Likelihood x Impact scoring matrix is adapted from the OWASP Risk Rating Methodology (owasp.org/www-community/OWASP_Risk_Rating_Methodology).
 - **Fagan Inspection limits**: The 400 LOC threshold references the SmartBear/Cisco study of 2,500 code reviews showing defect detection drops beyond that threshold, building on Fagan's original inspection methodology (1976).
 
-**Modifications by Joon Chung**: Consolidated from a 5-agent parallel architecture (`/plus-audit`) into a streamlined 2-agent sequential architecture (Comprehensive Reviewer + Critic). Added panel-tagging system, dashboard logging integration, paper trail archiving, and the "Think & Verify" self-disproof step before reporting.
+**Modifications by Joon Chung**: Extended from Cherny's prompting technique into a structured skill. Consolidated from a 5-agent parallel architecture (`/plus-audit`) into a streamlined 2-agent sequential architecture (Comprehensive Reviewer + Critic). Added 5C audit format, OWASP risk scoring, panel-tagging system, dashboard logging integration, paper trail archiving, and the "Think & Verify" self-disproof step before reporting.
 
 ## Methodology
 
